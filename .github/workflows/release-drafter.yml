@@ -14,7 +14,7 @@ on:
   #   types: [opened, reopened, synchronize]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   update_release_draft:
@@ -37,5 +37,6 @@ jobs:
         # with:
         #   config-name: my-config.yml
         #   disable-autolabeler: true
+        publish: true
         env:
           GITHUB_TOKEN: ${{ secrets.GHTOKEN }}
